@@ -1,0 +1,577 @@
+﻿___[MOD] C:\Users\jitsrivastava\source\repos\designPattern\designPattern\bin\Debug\netcoreapp2.1\DesignPattern.dll
+   |      M A N I F E S T
+   |___[NSP] DesignPattern
+   |   |___[CLS] DesignPattern.Computer
+   |   |   |     .class private auto ansi beforefieldinit 
+   |   |   |___[FLD] _processor : private class DesignPattern.IProcessor
+   |   |   |___[MET] .ctor : void(class DesignPattern.IProcessor)
+   |   |   |___[MET] BuildComputer : void()
+   |   |
+   |   |___[CLS] DesignPattern.DependencyInjection
+   |   |   |     .class private auto ansi beforefieldinit 
+   |   |   |___[MET] .ctor : void()
+   |   |
+   |   |___[INT] DesignPattern.IProcessor
+   |   |   |     .class interface public abstract auto ansi 
+   |   |   |___[MET] get_Core : string()
+   |   |   |___[MET] get_Speed : int32()
+   |   |   |___[MET] get_Type : string()
+   |   |   |___[MET] set_Core : void(string)
+   |   |   |___[MET] set_Speed : void(int32)
+   |   |   |___[MET] set_Type : void(string)
+   |   |   |___[PTY] Core : instance string()
+   |   |   |___[PTY] Speed : instance int32()
+   |   |   |___[PTY] Type : instance string()
+   |   |
+   |   |___[CLS] DesignPattern.Implementation
+   |   |   |     .class private auto ansi beforefieldinit 
+   |   |   |___[MET] .ctor : void()
+   |   |   |___[MET] BuildComputer : void()
+   |   |
+   |   |___[CLS] DesignPattern.IoCBuilder
+   |   |   |     .class public auto ansi beforefieldinit 
+   |   |   |___[MET] .ctor : void()
+   |   |   |___[STM] Build : class [Autofac]Autofac.IContainer()
+   |   |
+   |   |___[CLS] DesignPattern.Processor
+   |   |   |     .class private auto ansi beforefieldinit 
+   |   |   |      implements DesignPattern.IProcessor 
+   |   |   |___[MET] .ctor : void(int32)
+   |   |   |___[MET] get_Core : string()
+   |   |   |___[MET] get_Speed : int32()
+   |   |   |___[MET] get_Type : string()
+   |   |   |___[MET] set_Core : void(string)
+   |   |   |___[MET] set_Speed : void(int32)
+   |   |   |___[MET] set_Type : void(string)
+   |   |   |___[PTY] Core : instance string()
+   |   |   |___[PTY] Speed : instance int32()
+   |   |   |___[PTY] Type : instance string()
+   |   |
+   |
+   |___[NSP] creational.Prototype
+   |   |___[CLS] creational.Prototype.Example
+   |   |   |     .class public auto ansi beforefieldinit 
+   |   |   |___[MET] .ctor : void()
+   |   |   |___[STM] DMain : void()
+   |   |   |___[STM] DisplayValues : void(class creational.Prototype.Person)
+   |   |
+   |   |___[CLS] creational.Prototype.IdInfo
+   |   |   |     .class public auto ansi beforefieldinit 
+   |   |   |___[FLD] IdNumber : public int32
+   |   |   |___[MET] .ctor : void(int32)
+   |   |
+   |   |___[CLS] creational.Prototype.Person
+   |   |   |     .class public auto ansi beforefieldinit 
+   |   |   |___[FLD] Age : public int32
+   |   |   |___[FLD] IdInfo : public class creational.Prototype.IdInfo
+   |   |   |___[FLD] Name : public string
+   |   |   |___[MET] .ctor : void()
+   |   |   |___[MET] DeepCopy : class creational.Prototype.Person()
+   |   |   |___[MET] ShallowCopy : class creational.Prototype.Person()
+   |   |
+   |
+   |___[NSP] creational.Prototype2
+   |   |___[CLS] creational.Prototype2.Program
+   |   |   |     .class private auto ansi beforefieldinit 
+   |   |   |___[MET] .ctor : void()
+   |   |   |___[STM] DMain : void(string[])
+   |   |
+   |   |___[CLS] creational.Prototype2.Sandwich
+   |   |   |     .class private auto ansi beforefieldinit 
+   |   |   |      extends creational.Prototype2.SandwichPrototype 
+   |   |   |___[FLD] Bread : private string
+   |   |   |___[FLD] Cheese : private string
+   |   |   |___[FLD] Meat : private string
+   |   |   |___[FLD] Veggies : private string
+   |   |   |___[MET] .ctor : void(string,string,string,string)
+   |   |   |___[MET] Clone : class creational.Prototype2.SandwichPrototype()
+   |   |   |___[MET] GetIngredientList : string()
+   |   |
+   |   |___[CLS] creational.Prototype2.SandwichMenu
+   |   |   |     .class private auto ansi beforefieldinit 
+   |   |   |     .custom instance void [System.Runtime]System.Reflection.DefaultMemberAttribute::.ctor(string) = ( 01 00 04 49 74 65 6D 00 00 )                      // ...Item.. ...
+   |   |   |___[FLD] _sandwiches : private class [System.Collections]System.Collections.Generic.Dictionary`2<string,class creational.Prototype2.SandwichPrototype>
+   |   |   |___[MET] .ctor : void()
+   |   |   |___[MET] get_Item : class creational.Prototype2.SandwichPrototype(string)
+   |   |   |___[MET] set_Item : void(string,class creational.Prototype2.SandwichPrototype)
+   |   |   |___[PTY] Item : instance class creational.Prototype2.SandwichPrototype(string)
+   |   |
+   |   |___[CLS] creational.Prototype2.SandwichPrototype
+   |   |   |     .class public abstract auto ansi beforefieldinit 
+   |   |   |___[MET] .ctor : void()
+   |   |   |___[MET] Clone : class creational.Prototype2.SandwichPrototype()
+   |   |
+   |
+   |___[NSP] designPattern
+   |   |___[NSP] designPattern.EPI.Arrays
+   |   |   |___[CLS] designPattern.EPI.Arrays.Array
+   |   |   |   |     .class private auto ansi beforefieldinit 
+   |   |   |   |___[MET] .ctor : void()
+   |   |   |   |___[MET] RearrangeArray : void()
+   |   |   |
+   |   |
+   |   |___[NSP] designPattern.behavioral.ChainOfResp
+   |   |   |___[CLS] designPattern.behavioral.ChainOfResp.Approver
+   |   |   |   |     .class private abstract auto ansi beforefieldinit 
+   |   |   |   |___[FLD] sucessor : family class designPattern.behavioral.ChainOfResp.Approver
+   |   |   |   |___[MET] .ctor : void()
+   |   |   |   |___[MET] ProcessRequest : void(class designPattern.behavioral.ChainOfResp.Purchase)
+   |   |   |   |___[MET] SetSucessor : void(class designPattern.behavioral.ChainOfResp.Approver)
+   |   |   |
+   |   |   |___[CLS] designPattern.behavioral.ChainOfResp.ChainOfResp
+   |   |   |   |     .class private auto ansi beforefieldinit 
+   |   |   |   |___[MET] .ctor : void()
+   |   |   |   |___[STM] DMain : void()
+   |   |   |
+   |   |   |___[CLS] designPattern.behavioral.ChainOfResp.Director
+   |   |   |   |     .class private auto ansi beforefieldinit 
+   |   |   |   |      extends designPattern.behavioral.ChainOfResp.Approver 
+   |   |   |   |___[MET] .ctor : void()
+   |   |   |   |___[MET] ProcessRequest : void(class designPattern.behavioral.ChainOfResp.Purchase)
+   |   |   |
+   |   |   |___[CLS] designPattern.behavioral.ChainOfResp.President
+   |   |   |   |     .class private auto ansi beforefieldinit 
+   |   |   |   |      extends designPattern.behavioral.ChainOfResp.Approver 
+   |   |   |   |___[MET] .ctor : void()
+   |   |   |   |___[MET] ProcessRequest : void(class designPattern.behavioral.ChainOfResp.Purchase)
+   |   |   |
+   |   |   |___[CLS] designPattern.behavioral.ChainOfResp.Purchase
+   |   |   |   |     .class private auto ansi beforefieldinit 
+   |   |   |   |___[FLD] _amount : private float64
+   |   |   |   |___[FLD] _number : private int32
+   |   |   |   |___[FLD] _purpose : private string
+   |   |   |   |___[MET] .ctor : void(int32,float64,string)
+   |   |   |   |___[MET] get_Amount : float64()
+   |   |   |   |___[MET] get_Number : int32()
+   |   |   |   |___[MET] get_Purpose : string()
+   |   |   |   |___[MET] set_Amount : void(float64)
+   |   |   |   |___[MET] set_Number : void(int32)
+   |   |   |   |___[MET] set_Purpose : void(string)
+   |   |   |   |___[PTY] Amount : instance float64()
+   |   |   |   |___[PTY] Number : instance int32()
+   |   |   |   |___[PTY] Purpose : instance string()
+   |   |   |
+   |   |   |___[CLS] designPattern.behavioral.ChainOfResp.VicePresident
+   |   |   |   |     .class private auto ansi beforefieldinit 
+   |   |   |   |      extends designPattern.behavioral.ChainOfResp.Approver 
+   |   |   |   |___[MET] .ctor : void()
+   |   |   |   |___[MET] ProcessRequest : void(class designPattern.behavioral.ChainOfResp.Purchase)
+   |   |   |
+   |   |
+   |   |___[NSP] designPattern.creational.AbstractFactoryMethod
+   |   |   |___[CLS] designPattern.creational.AbstractFactoryMethod.BeachShirt
+   |   |   |   |     .class private auto ansi beforefieldinit 
+   |   |   |   |      implements designPattern.creational.AbstractFactoryMethod.IShirt 
+   |   |   |   |___[MET] .ctor : void()
+   |   |   |   |___[MET] Shirt : string()
+   |   |   |
+   |   |   |___[CLS] designPattern.creational.AbstractFactoryMethod.FunkyJeans
+   |   |   |   |     .class private auto ansi beforefieldinit 
+   |   |   |   |      implements designPattern.creational.AbstractFactoryMethod.IJeans 
+   |   |   |   |___[MET] .ctor : void()
+   |   |   |   |___[MET] Jeans : string()
+   |   |   |
+   |   |   |___[CLS] designPattern.creational.AbstractFactoryMethod.HeroFactory
+   |   |   |   |     .class private auto ansi beforefieldinit 
+   |   |   |   |      implements designPattern.creational.AbstractFactoryMethod.IVehicleFactory 
+   |   |   |   |___[MET] .ctor : void()
+   |   |   |   |___[MET] GetBike : class designPattern.creational.AbstractFactoryMethod.IBike(string)
+   |   |   |   |___[MET] GetScooter : class designPattern.creational.AbstractFactoryMethod.IScooter(string)
+   |   |   |
+   |   |   |___[CLS] designPattern.creational.AbstractFactoryMethod.HondaFactory
+   |   |   |   |     .class private auto ansi beforefieldinit 
+   |   |   |   |      implements designPattern.creational.AbstractFactoryMethod.IVehicleFactory 
+   |   |   |   |___[MET] .ctor : void()
+   |   |   |   |___[MET] GetBike : class designPattern.creational.AbstractFactoryMethod.IBike(string)
+   |   |   |   |___[MET] GetScooter : class designPattern.creational.AbstractFactoryMethod.IScooter(string)
+   |   |   |
+   |   |   |___[INT] designPattern.creational.AbstractFactoryMethod.IBike
+   |   |   |   |     .class interface private abstract auto ansi 
+   |   |   |   |___[MET] Name : string()
+   |   |   |
+   |   |   |___[INT] designPattern.creational.AbstractFactoryMethod.IClothsFactory
+   |   |   |   |     .class interface private abstract auto ansi 
+   |   |   |   |___[MET] GetJeans : class designPattern.creational.AbstractFactoryMethod.IJeans(string)
+   |   |   |   |___[MET] GetShirt : class designPattern.creational.AbstractFactoryMethod.IShirt(string)
+   |   |   |
+   |   |   |___[INT] designPattern.creational.AbstractFactoryMethod.IJeans
+   |   |   |   |     .class interface public abstract auto ansi 
+   |   |   |   |___[MET] Jeans : string()
+   |   |   |
+   |   |   |___[INT] designPattern.creational.AbstractFactoryMethod.IScooter
+   |   |   |   |     .class interface private abstract auto ansi 
+   |   |   |   |___[MET] Name : string()
+   |   |   |
+   |   |   |___[INT] designPattern.creational.AbstractFactoryMethod.IShirt
+   |   |   |   |     .class interface public abstract auto ansi 
+   |   |   |   |___[MET] Shirt : string()
+   |   |   |
+   |   |   |___[INT] designPattern.creational.AbstractFactoryMethod.IVehicleFactory
+   |   |   |   |     .class interface private abstract auto ansi 
+   |   |   |   |___[MET] GetBike : class designPattern.creational.AbstractFactoryMethod.IBike(string)
+   |   |   |   |___[MET] GetScooter : class designPattern.creational.AbstractFactoryMethod.IScooter(string)
+   |   |   |
+   |   |   |___[CLS] designPattern.creational.AbstractFactoryMethod.Implementation
+   |   |   |   |     .class private auto ansi beforefieldinit 
+   |   |   |   |___[MET] .ctor : void()
+   |   |   |   |___[MET] GetStudentName : void()
+   |   |   |
+   |   |   |___[CLS] designPattern.creational.AbstractFactoryMethod.LatestJeans
+   |   |   |   |     .class private auto ansi beforefieldinit 
+   |   |   |   |      implements designPattern.creational.AbstractFactoryMethod.IJeans 
+   |   |   |   |___[MET] .ctor : void()
+   |   |   |   |___[MET] Jeans : string()
+   |   |   |
+   |   |   |___[CLS] designPattern.creational.AbstractFactoryMethod.LatestShirt
+   |   |   |   |     .class private auto ansi beforefieldinit 
+   |   |   |   |      implements designPattern.creational.AbstractFactoryMethod.IShirt 
+   |   |   |   |___[MET] .ctor : void()
+   |   |   |   |___[MET] Shirt : string()
+   |   |   |
+   |   |   |___[CLS] designPattern.creational.AbstractFactoryMethod.Lee
+   |   |   |   |     .class private auto ansi beforefieldinit 
+   |   |   |   |      implements designPattern.creational.AbstractFactoryMethod.IClothsFactory 
+   |   |   |   |___[MET] .ctor : void()
+   |   |   |   |___[MET] GetJeans : class designPattern.creational.AbstractFactoryMethod.IJeans(string)
+   |   |   |   |___[MET] GetShirt : class designPattern.creational.AbstractFactoryMethod.IShirt(string)
+   |   |   |
+   |   |   |___[CLS] designPattern.creational.AbstractFactoryMethod.LuxaryJeans
+   |   |   |   |     .class private auto ansi beforefieldinit 
+   |   |   |   |      implements designPattern.creational.AbstractFactoryMethod.IJeans 
+   |   |   |   |___[MET] .ctor : void()
+   |   |   |   |___[MET] Jeans : string()
+   |   |   |
+   |   |   |___[CLS] designPattern.creational.AbstractFactoryMethod.LuxaryShirt
+   |   |   |   |     .class private auto ansi beforefieldinit 
+   |   |   |   |      implements designPattern.creational.AbstractFactoryMethod.IShirt 
+   |   |   |   |___[MET] .ctor : void()
+   |   |   |   |___[MET] Shirt : string()
+   |   |   |
+   |   |   |___[CLS] designPattern.creational.AbstractFactoryMethod.MyClass
+   |   |   |   |     .class private auto ansi beforefieldinit 
+   |   |   |   |___[MET] .ctor : void()
+   |   |   |   |___[STM] DMain : void()
+   |   |   |
+   |   |   |___[CLS] designPattern.creational.AbstractFactoryMethod.Program
+   |   |   |   |     .class private auto ansi beforefieldinit 
+   |   |   |   |___[MET] .ctor : void()
+   |   |   |   |___[STM] DMain : void(string[])
+   |   |   |
+   |   |   |___[CLS] designPattern.creational.AbstractFactoryMethod.RegularBike
+   |   |   |   |     .class private auto ansi beforefieldinit 
+   |   |   |   |      implements designPattern.creational.AbstractFactoryMethod.IBike 
+   |   |   |   |___[MET] .ctor : void()
+   |   |   |   |___[MET] Name : string()
+   |   |   |
+   |   |   |___[CLS] designPattern.creational.AbstractFactoryMethod.RegularScooter
+   |   |   |   |     .class private auto ansi beforefieldinit 
+   |   |   |   |      implements designPattern.creational.AbstractFactoryMethod.IScooter 
+   |   |   |   |___[MET] .ctor : void()
+   |   |   |   |___[MET] Name : string()
+   |   |   |
+   |   |   |___[CLS] designPattern.creational.AbstractFactoryMethod.Scooty
+   |   |   |   |     .class private auto ansi beforefieldinit 
+   |   |   |   |      implements designPattern.creational.AbstractFactoryMethod.IScooter 
+   |   |   |   |___[MET] .ctor : void()
+   |   |   |   |___[MET] Name : string()
+   |   |   |
+   |   |   |___[CLS] designPattern.creational.AbstractFactoryMethod.SportsBike
+   |   |   |   |     .class private auto ansi beforefieldinit 
+   |   |   |   |      implements designPattern.creational.AbstractFactoryMethod.IBike 
+   |   |   |   |___[MET] .ctor : void()
+   |   |   |   |___[MET] Name : string()
+   |   |   |
+   |   |   |___[CLS] designPattern.creational.AbstractFactoryMethod.StoreClient
+   |   |   |   |     .class private auto ansi beforefieldinit 
+   |   |   |   |___[FLD] jeans : private class designPattern.creational.AbstractFactoryMethod.IJeans
+   |   |   |   |___[FLD] shirt : private class designPattern.creational.AbstractFactoryMethod.IShirt
+   |   |   |   |___[MET] .ctor : void(class designPattern.creational.AbstractFactoryMethod.IClothsFactory,string)
+   |   |   |   |___[MET] GetJeanType : string()
+   |   |   |   |___[MET] GetShirtType : string()
+   |   |   |
+   |   |   |___[CLS] designPattern.creational.AbstractFactoryMethod.Student
+   |   |   |   |     .class private auto ansi beforefieldinit 
+   |   |   |   |___[FLD] <StudentType>k__BackingField : private string
+   |   |   |   |___[MET] .ctor : void(string)
+   |   |   |   |___[MET] GetFName : string()
+   |   |   |   |___[MET] GetName : string()
+   |   |   |   |___[MET] get_StudentType : string()
+   |   |   |   |___[MET] set_StudentType : void(string)
+   |   |   |   |___[PTY] StudentType : instance string()
+   |   |   |
+   |   |   |___[CLS] designPattern.creational.AbstractFactoryMethod.TrendyJeans
+   |   |   |   |     .class private auto ansi beforefieldinit 
+   |   |   |   |      implements designPattern.creational.AbstractFactoryMethod.IJeans 
+   |   |   |   |___[MET] .ctor : void()
+   |   |   |   |___[MET] Jeans : string()
+   |   |   |
+   |   |   |___[CLS] designPattern.creational.AbstractFactoryMethod.TrendyShirt
+   |   |   |   |     .class private auto ansi beforefieldinit 
+   |   |   |   |      implements designPattern.creational.AbstractFactoryMethod.IShirt 
+   |   |   |   |___[MET] .ctor : void()
+   |   |   |   |___[MET] Shirt : string()
+   |   |   |
+   |   |   |___[CLS] designPattern.creational.AbstractFactoryMethod.VehicleClient
+   |   |   |   |     .class private auto ansi beforefieldinit 
+   |   |   |   |___[FLD] bike : private class designPattern.creational.AbstractFactoryMethod.IBike
+   |   |   |   |___[FLD] scooter : private class designPattern.creational.AbstractFactoryMethod.IScooter
+   |   |   |   |___[MET] .ctor : void(class designPattern.creational.AbstractFactoryMethod.IVehicleFactory,string)
+   |   |   |   |___[MET] GetBikeName : string()
+   |   |   |   |___[MET] GetScooterName : string()
+   |   |   |
+   |   |   |___[CLS] designPattern.creational.AbstractFactoryMethod.Zara
+   |   |   |   |     .class private auto ansi beforefieldinit 
+   |   |   |   |      implements designPattern.creational.AbstractFactoryMethod.IClothsFactory 
+   |   |   |   |___[MET] .ctor : void()
+   |   |   |   |___[MET] GetJeans : class designPattern.creational.AbstractFactoryMethod.IJeans(string)
+   |   |   |   |___[MET] GetShirt : class designPattern.creational.AbstractFactoryMethod.IShirt(string)
+   |   |   |
+   |   |
+   |   |___[NSP] designPattern.creational.Builder
+   |   |   |___[CLS] designPattern.creational.Builder.Builder
+   |   |   |   |     .class private auto ansi beforefieldinit 
+   |   |   |   |___[MET] .ctor : void()
+   |   |   |   |___[STM] DMain : void()
+   |   |   |
+   |   |   |___[CLS] designPattern.creational.Builder.CivilEngineer
+   |   |   |   |     .class private auto ansi beforefieldinit 
+   |   |   |   |___[FLD] houseBuilder : private class designPattern.creational.Builder.IHouseBuilder
+   |   |   |   |___[FLD] v : private string
+   |   |   |   |___[MET] .ctor : void()
+   |   |   |   |___[MET] .ctor : void(string)
+   |   |   |   |___[MET] .ctor : void(class designPattern.creational.Builder.IHouseBuilder)
+   |   |   |   |___[MET] ConstructHouse : void()
+   |   |   |   |___[MET] GetHouse : class designPattern.creational.Builder.House()
+   |   |   |
+   |   |   |___[CLS] designPattern.creational.Builder.House
+   |   |   |   |     .class private auto ansi beforefieldinit 
+   |   |   |   |      implements designPattern.creational.Builder.IHousePlan 
+   |   |   |   |___[FLD] basement : private string
+   |   |   |   |___[FLD] interior : private string
+   |   |   |   |___[FLD] roof : private string
+   |   |   |   |___[FLD] structure : private string
+   |   |   |   |___[MET] .ctor : void()
+   |   |   |   |___[MET] SetBasement : void(string)
+   |   |   |   |___[MET] SetInterior : void(string)
+   |   |   |   |___[MET] SetRoof : void(string)
+   |   |   |   |___[MET] SetStructure : void(string)
+   |   |   |
+   |   |   |___[INT] designPattern.creational.Builder.IHouseBuilder
+   |   |   |   |     .class interface private abstract auto ansi 
+   |   |   |   |___[MET] buildBasement : void()
+   |   |   |   |___[MET] buildInterior : void()
+   |   |   |   |___[MET] buildStructure : void()
+   |   |   |   |___[MET] bulidRoof : void()
+   |   |   |   |___[MET] getHouse : class designPattern.creational.Builder.House()
+   |   |   |
+   |   |   |___[INT] designPattern.creational.Builder.IHousePlan
+   |   |   |   |     .class interface private abstract auto ansi 
+   |   |   |   |___[MET] SetBasement : void(string)
+   |   |   |   |___[MET] SetInterior : void(string)
+   |   |   |   |___[MET] SetRoof : void(string)
+   |   |   |   |___[MET] SetStructure : void(string)
+   |   |   |
+   |   |   |___[CLS] designPattern.creational.Builder.IglooHouseBuilder
+   |   |   |   |     .class private auto ansi beforefieldinit 
+   |   |   |   |      implements designPattern.creational.Builder.IHouseBuilder 
+   |   |   |   |___[FLD] house : private class designPattern.creational.Builder.House
+   |   |   |   |___[MET] .ctor : void()
+   |   |   |   |___[MET] buildBasement : void()
+   |   |   |   |___[MET] buildInterior : void()
+   |   |   |   |___[MET] buildStructure : void()
+   |   |   |   |___[MET] bulidRoof : void()
+   |   |   |   |___[MET] getHouse : class designPattern.creational.Builder.House()
+   |   |   |
+   |   |   |___[CLS] designPattern.creational.Builder.TipiHouseBuilder
+   |   |   |   |     .class private auto ansi beforefieldinit 
+   |   |   |   |      implements designPattern.creational.Builder.IHouseBuilder 
+   |   |   |   |___[FLD] house : private class designPattern.creational.Builder.House
+   |   |   |   |___[MET] .ctor : void()
+   |   |   |   |___[MET] buildBasement : void()
+   |   |   |   |___[MET] buildInterior : void()
+   |   |   |   |___[MET] buildStructure : void()
+   |   |   |   |___[MET] bulidRoof : void()
+   |   |   |   |___[MET] getHouse : class designPattern.creational.Builder.House()
+   |   |   |
+   |   |
+   |   |___[NSP] designPattern.creational.FactoryMethod
+   |   |   |___[CLS] designPattern.creational.FactoryMethod.Bike
+   |   |   |   |     .class public auto ansi beforefieldinit 
+   |   |   |   |      implements designPattern.creational.FactoryMethod.IProduct 
+   |   |   |   |___[MET] .ctor : void()
+   |   |   |   |___[MET] Drive : void(int32)
+   |   |   |
+   |   |   |___[CLS] designPattern.creational.FactoryMethod.ConcreteVehicalFactory
+   |   |   |   |     .class public auto ansi beforefieldinit 
+   |   |   |   |      extends designPattern.creational.FactoryMethod.VehicalFactory 
+   |   |   |   |___[MET] .ctor : void()
+   |   |   |   |___[MET] GetVehical : class designPattern.creational.FactoryMethod.IProduct(string)
+   |   |   |
+   |   |   |___[CLS] designPattern.creational.FactoryMethod.Factory
+   |   |   |   |     .class public auto ansi beforefieldinit 
+   |   |   |   |___[MET] .ctor : void()
+   |   |   |   |___[MET] Implementation : void()
+   |   |   |
+   |   |   |___[INT] designPattern.creational.FactoryMethod.IProduct
+   |   |   |   |     .class interface public abstract auto ansi 
+   |   |   |   |___[MET] Drive : void(int32)
+   |   |   |
+   |   |   |___[CLS] designPattern.creational.FactoryMethod.Scooter
+   |   |   |   |     .class public auto ansi beforefieldinit 
+   |   |   |   |      implements designPattern.creational.FactoryMethod.IProduct 
+   |   |   |   |___[MET] .ctor : void()
+   |   |   |   |___[MET] Drive : void(int32)
+   |   |   |
+   |   |   |___[CLS] designPattern.creational.FactoryMethod.VehicalFactory
+   |   |   |   |     .class public abstract auto ansi beforefieldinit 
+   |   |   |   |___[MET] .ctor : void()
+   |   |   |   |___[MET] GetVehical : class designPattern.creational.FactoryMethod.IProduct(string)
+   |   |   |
+   |   |
+   |   |___[NSP] designPattern.creational.FactoryMethod2
+   |   |   |___[CLS] designPattern.creational.FactoryMethod2.Factory
+   |   |   |   |     .class private auto ansi beforefieldinit 
+   |   |   |   |___[MET] .ctor : void()
+   |   |   |   |___[MET] CreateImageReader : class designPattern.creational.FactoryMethod2.IReader(string)
+   |   |   |
+   |   |   |___[CLS] designPattern.creational.FactoryMethod2.GIF
+   |   |   |   |     .class private auto ansi beforefieldinit 
+   |   |   |   |      implements designPattern.creational.FactoryMethod2.IReader 
+   |   |   |   |___[MET] .ctor : void()
+   |   |   |   |___[MET] Read : void()
+   |   |   |
+   |   |   |___[INT] designPattern.creational.FactoryMethod2.IReader
+   |   |   |   |     .class interface public abstract auto ansi 
+   |   |   |   |___[MET] Read : void()
+   |   |   |
+   |   |   |___[INT] designPattern.creational.FactoryMethod2.IShape
+   |   |   |   |     .class interface public abstract auto ansi 
+   |   |   |   |___[MET] Draw : void()
+   |   |   |
+   |   |   |___[CLS] designPattern.creational.FactoryMethod2.JPEG
+   |   |   |   |     .class private auto ansi beforefieldinit 
+   |   |   |   |      implements designPattern.creational.FactoryMethod2.IReader 
+   |   |   |   |___[MET] .ctor : void()
+   |   |   |   |___[MET] Read : void()
+   |   |   |
+   |   |   |___[CLS] designPattern.creational.FactoryMethod2.Rectangle
+   |   |   |   |     .class public auto ansi beforefieldinit 
+   |   |   |   |      implements designPattern.creational.FactoryMethod2.IShape 
+   |   |   |   |___[MET] .ctor : void()
+   |   |   |   |___[MET] Draw : void()
+   |   |   |
+   |   |   |___[CLS] designPattern.creational.FactoryMethod2.ShapeConcereteFactory
+   |   |   |   |     .class public auto ansi beforefieldinit 
+   |   |   |   |___[MET] .ctor : void()
+   |   |   |   |___[STM] GetShape : class designPattern.creational.FactoryMethod2.IShape(string)
+   |   |   |
+   |   |   |___[CLS] designPattern.creational.FactoryMethod2.Square
+   |   |   |   |     .class public auto ansi beforefieldinit 
+   |   |   |   |      implements designPattern.creational.FactoryMethod2.IShape 
+   |   |   |   |___[MET] .ctor : void()
+   |   |   |   |___[MET] Draw : void()
+   |   |   |
+   |   |   |___[CLS] designPattern.creational.FactoryMethod2.Triangle
+   |   |   |   |     .class public auto ansi beforefieldinit 
+   |   |   |   |      implements designPattern.creational.FactoryMethod2.IShape 
+   |   |   |   |___[MET] .ctor : void()
+   |   |   |   |___[MET] Draw : void()
+   |   |   |
+   |   |
+   |   |___[NSP] designPattern.program
+   |   |   |___[CLS] designPattern.program.BinaryTree
+   |   |   |   |     .class private auto ansi beforefieldinit 
+   |   |   |   |___[MET] .ctor : void()
+   |   |   |   |___[MET] FindElement : bool(class designPattern.program.Node,int32)
+   |   |   |   |     InorderTraversal : class [System.Runtime]System.Collections.Generic.IList`1<int32>(class designPattern.program.Node)
+   |   |   |   |___[MET] InsertElemet : bool(class designPattern.program.Node,int32)
+   |   |   |   |___[MET] MaxElement : int32(class designPattern.program.Node)
+   |   |   |   |___[MET] Que : void()
+   |   |   |
+   |   |   |___[CLS] designPattern.program.DependencyInjection
+   |   |   |   |     .class private auto ansi beforefieldinit 
+   |   |   |   |___[MET] .ctor : void()
+   |   |   |   |___[MET] Implementation : void()
+   |   |   |
+   |   |   |___[CLS] designPattern.program.Execute
+   |   |   |   |     .class private auto ansi beforefieldinit 
+   |   |   |   |___[MET] .ctor : void()
+   |   |   |   |___[STM] MainD : void()
+   |   |   |
+   |   |   |___[CLS] designPattern.program.IOCSpellChecker
+   |   |   |   |     .class private auto ansi beforefieldinit 
+   |   |   |   |___[MET] .ctor : void()
+   |   |   |
+   |   |   |___[CLS] designPattern.program.Node
+   |   |   |   |     .class private auto ansi beforefieldinit 
+   |   |   |   |___[FLD] key : public int32
+   |   |   |   |___[FLD] left : public class designPattern.program.Node
+   |   |   |   |___[FLD] right : public class designPattern.program.Node
+   |   |   |   |___[MET] .ctor : void(int32)
+   |   |   |
+   |   |   |___[CLS] designPattern.program.Node1
+   |   |   |   |     .class public auto ansi beforefieldinit 
+   |   |   |   |___[FLD] key : public int32
+   |   |   |   |___[FLD] left : public class designPattern.program.Node1
+   |   |   |   |___[FLD] right : public class designPattern.program.Node1
+   |   |   |   |___[MET] .ctor : void(int32)
+   |   |   |
+   |   |   |___[CLS] designPattern.program.TextWriter
+   |   |   |   |     .class private auto ansi beforefieldinit 
+   |   |   |   |___[FLD] checker : private class designPattern.program.IOCSpellChecker
+   |   |   |   |___[MET] .ctor : void(class designPattern.program.IOCSpellChecker)
+   |   |   |   |___[MET] CheckSpelling : void()
+   |   |   |
+   |   |   |___[CLS] designPattern.program.isUniqueString
+   |   |   |   |     .class private auto ansi beforefieldinit 
+   |   |   |   |___[MET] .ctor : void()
+   |   |   |   |___[STM] DMain : void()
+   |   |   |   |___[STM] IsUniqueString : bool(string)
+   |   |   |
+   |   |   |___[CLS] designPattern.program.rotateArray
+   |   |   |   |     .class private auto ansi beforefieldinit 
+   |   |   |   |___[MET] .ctor : void()
+   |   |   |   |___[STM] HeightOfBTree : int32(class designPattern.program.Node1)
+   |   |   |   |___[STM] LeftRotate : void(int32[],int32,int32)
+   |   |   |   |___[STM] LeftRotateByOne : void(int32[])
+   |   |   |   |___[STM] RightRotate : void(int32[],int32,int32)
+   |   |   |   |___[STM] RightRotateByOne : void(int32[],int32)
+   |   |   |   |___[STM] dMain : void()
+   |   |   |
+   |   |
+   |   |___[CLS] designPattern.A
+   |   |   |     .class private auto ansi beforefieldinit 
+   |   |   |___[FLD] i : family int32
+   |   |   |___[MET] .ctor : void()
+   |   |   |___[MET] F : void()
+   |   |   |___[MET] H : void()
+   |   |
+   |   |___[CLS] designPattern.B
+   |   |   |     .class private auto ansi beforefieldinit 
+   |   |   |      extends designPattern.A 
+   |   |   |___[MET] .ctor : void()
+   |   |   |___[MET] F : void()
+   |   |   |___[MET] G : void()
+   |   |
+   |   |___[CLS] designPattern.Program
+   |   |   |     .class private auto ansi beforefieldinit 
+   |   |   |___[STF] _test : private static initonly string
+   |   |   |___[MET] .ctor : void()
+   |   |   |___[STM] Main : void(string[])
+   |   |
+   |   |___[CLS] designPattern.Test
+   |   |   |     .class private auto ansi beforefieldinit 
+   |   |   |___[MET] .ctor : void()
+   |   |   |___[STM] DMain : void()
+   |   |
+   |
+   |___[CLS] <PrivateImplementationDetails>
+   |   |     .class private auto ansi sealed 
+   |   |     .custom instance void [System.Runtime]System.Runtime.CompilerServices.CompilerGeneratedAttribute::.ctor() = ( 01 00 00 00 )  ...
+   |   |___[VCL] __StaticArrayInitTypeSize=36
+   |   |   |     .class value nested private explicit ansi sealed 
+   |   |   |      extends [System.Runtime]System.ValueType 
+   |   |
+   |   |___[STF] 34C4CFA99467D5316845B1EC0F07C9DF8302DFFF : static assembly initonly valuetype '<PrivateImplementationDetails>'/'__StaticArrayInitTypeSize=36' at I_000071A4
+   |
+

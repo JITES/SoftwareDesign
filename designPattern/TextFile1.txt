@@ -1,0 +1,29 @@
+﻿using System;
+
+class Test
+{
+    static string x;
+
+    static void Main()
+    {
+        Console.WriteLine(Method());
+        Console.WriteLine(x);
+    }
+
+    static string Method()
+    {
+        try
+        {
+            x = "try";
+            return x;
+        }
+        finally
+        {
+            x = "finally";
+        }
+    }
+}
+This prints "try" (because that's what's returned) and then "finally" because that's the new value of x.
+
+Of course, if we're returning a reference to a mutable object (e.g. a StringBuilder) then any changes made to the 
+object in the finally block will be visible on return - this hasn't affected the return value itself (which is just a reference).
